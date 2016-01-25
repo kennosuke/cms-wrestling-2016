@@ -1,0 +1,40 @@
+{
+  "name": "gulpfile_generator",
+  "version": "1.1.0",
+  "description": "This is a genarator for gulpfile and package.json",
+  "author": "steelydylan",
+  "url": "http://horicdesign.com",
+  "license": "MIT",
+  "keywords": [
+    "gulp"
+  ],
+  "devDependencies": {
+    "browser-sync": "*",
+    "es6-promise": "*",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "*",
+    "gulp-bower": "0.0.11",
+    "gulp-concat": "*",
+    "gulp-csscomb": "*",
+    "gulp-csslint": "*",
+    "gulp-frontnote": "*",
+    "gulp-jshint": "^2.0.0",
+    "gulp-merge-media-queries": "*",
+    "gulp-minify-css": "*",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-sass": "^2.1.1",
+    "gulp-uglify": "*",
+    "jshint": "^2.9.1"
+  },
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,30 @@
+/*===================================================
+
+$module
+
+// $title
+
+===================================================*/
+
+p{
+  padding: 0.6em;
+}
+
+.navbar-default{
+    .navbar-nav{
+      & > li{
+        & > a {
+          color: #fff;
+          font-weight: 700;
+          font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+
+// $title
+
+.sec-title{
+  @include en-font-b;
+}

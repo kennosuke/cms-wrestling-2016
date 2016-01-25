@@ -1,0 +1,120 @@
+/*===================================================
+
+$base
+
+===================================================*/
+
+
+/*------------------------
+
+変数の定義
+
+------------------------*/
+
+$base-font-size: 14px;
+$small-fonts-size: 10px;
+$img-dir: "../images/";
+$bk-color-1: #e6e6e6;
+
+
+/*------------------------
+
+$helper
+
+------------------------*/
+
+//ループ
+
+//＠if
+
+// fontsize を　12から40まで
+// for文
+// .fs10{font-size: 10px;}　〜　.fs40{font-size: 40px;}
+
+/*for文*/
+
+@for $i from 10 through 40{
+  .fs#{$i} {font-size: #{$i}px;}
+}
+/*------------------------
+
+$mixin
+
+------------------------*/
+
+//section
+
+@mixin sec-pad {
+  padding: 80px 0;
+
+}
+
+//font-family
+
+@mixin jp-font{
+  font-family: "ryo-gothic-plusn",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+@mixin jp-font-b{
+  font-family: "ryo-gothic-plusn",sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+@mixin en-font{
+  font-family: "azo-sans-web",sans-serif;
+  font-style: normal;
+  font-weight: 400;}
+
+@mixin en-font-m{
+  font-family: "azo-sans-web",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+@mixin en-font-b{
+  font-family: "azo-sans-web",sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+@mixin en-font-bl{
+  font-family: "azo-sans-web",sans-serif;
+  font-style: normal;
+  font-weight: 900;
+}
+
+//font-color
+
+@mixin font-white {
+  color: #fff;
+}
+@mixin font-black {
+  color: #333;
+}
+@mixin font-gray {
+  color: #d3d3d3;
+}
+
+//font-size
+
+@mixin font-basesize {
+  font-size: 1.6rem;
+
+}
+
+//layout
+
+@mixin logo-layout{
+  background-position: top left;
+  background-repeat: no-repeat;
+  white-space: nowrap
+}
+
+//img-filter-gray
+
+@mixin img-blight-gray{
+  -webkit-filter: brightness(0.6);
+  -moz-filter: brightness(0.6);
+  -o-filter: brightness(0.6);
+  -ms-filter: brightness(0.6);
+  filter: brightness(0.6);
+}

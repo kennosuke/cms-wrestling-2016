@@ -1,0 +1,22 @@
+/*
+#styleguide
+汎用スタイル
+
+全ページで汎用的に使うスタイルです。
+
+@depulicated
+@非推奨
+@todo
+@common
+
+```
+<h1 class="level1">見だし1</h1>
+```
+*/
+
+.level1 {
+	font-weight: bold;
+	display: block;
+	padding: 10px;
+	background-color: green;
+}
