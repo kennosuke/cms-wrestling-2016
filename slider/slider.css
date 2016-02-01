@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+
+/* .flickSlider
+--------------------------- */
+.flickSlider {
+	margin: 0 auto;
+	text-align: left;
+	display: none;
+}
+
+/* .flickView
+--------------------------- */
+.flickSlider .flickView {
+	width: 100%;
+	text-align: left;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+.flickSlider .flickView ul {
+	top: 0;
+	left: 0;
+	width: 100%;
+	position: absolute;
+	overflow: hidden;
+}
+.flickSlider .flickView ul li {
+	width: 100%;
+	float: left;
+	display: inline;
+	overflow: hidden;
+}
+.flickSlider .flickView ul li img {
+	width: 100%;
+}
+.view-txt{
+	position: absolute;
+	top: 94px;
+	left: 400px;
+	background-color: #1d1d1d;
+	height: 340px;
+	width: 600px;
+	padding: 50px;
+	color: #fff;
+}
+
+.view-txt a{
+	color: #1d1d1d;
+	display: inline-block;
+	background: #fff;
+	padding: 0 30px;
+	box-sizing: border-box;
+	position: absolute;
+	right: 22px;
+	bottom: 50px;
+}
+
+.view-txt a:hover {
+		text-decoration: none;
+		opacity: 0.5;
+}
+
+.view-box{
+	position: relative;
+}
+
+
+/* .flickThumb
+--------------------------- */
+.flickSlider .flickThumb {
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+.flickSlider .flickThumb ul {
+	width: 110%;
+}
+.flickSlider .flickThumb ul li {
+	float: left;
+	cursor: pointer;
+	display: inline;
+}
+.flickSlider .flickThumb ul li img {
+	width: 100%;
+}
+.flickSlider .flickThumb ul li.active {
+	filter:alpha(opacity=100)!important;
+	-moz-opacity: 1!important;
+	opacity: 1!important;
+}
+
+.view-btn{
+	float: right;
+}
+
+/* sideNavi
+------------------------- */
+#slider-box{
+	position: relative;
+}
+
+.btnPrev,
+.btnNext {
+	top: 0;
+	width: 45px;
+	height: 45px;
+	position: absolute;
+	cursor: pointer;
+}
+
+.btnPrev {
+	top: 605px;
+	left: 6%;
+	background: #333;
+}
+
+.btnNext {
+	top: 605px;
+	right: 6%;
+	background: #333;
+}
+
+@media (max-width: 768px) {
+  .btnPrev{
+    top: 98%;
+		left: 25%;
+  }
+	.btnNext {
+		top: 98%;
+		right: 25%;
+	}
+}
+
+
+/* =======================================
+	ClearFixElements
+======================================= */
+.flickSlider .flickView ul:after,
+.flickSlider .flickThumb ul:after {
+	content: ".";
+	height: 0;
+	clear: both;
+	display: block;
+	visibility: hidden;
+}
+
+.flickSlider .flickView ul,
+.flickSlider .flickThumb ul {
+	display: inline-block;
+	overflow: hidden;
+}

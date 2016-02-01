@@ -4,6 +4,37 @@ $base
 
 ===================================================*/
 
+/*------------------------
+
+google icon-font
+
+------------------------*/
+
+// Material iconsを利用する
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* 推奨サイズ */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+
+  // WebKitブラウザサポート
+  -webkit-font-smoothing: antialiased;
+
+  // Chrome、Safariサポート
+  text-rendering: optimizeLegibility;
+
+  // Firefoxサポート
+  -moz-osx-font-smoothing: grayscale;
+
+  // IEサポート
+  font-feature-settings: 'liga';
+}
 
 /*------------------------
 
@@ -12,10 +43,13 @@ $base
 ------------------------*/
 
 $base-font-size: 14px;
+$base-color: #1d1d1d;
+$theme-color: #42455e;
 $small-fonts-size: 10px;
 $img-dir: "../images/";
 $bk-color-1: #e6e6e6;
-
+$bk-color-2: #101010;
+$font-base-speace: 0.1em;
 
 /*------------------------
 
@@ -50,6 +84,9 @@ $mixin
 }
 
 //font-family
+
+
+
 
 @mixin jp-font{
   font-family: "ryo-gothic-plusn",sans-serif;
@@ -101,6 +138,13 @@ $mixin
 
 }
 
+//font-speace
+
+@mixin font-speace {
+  letter-spacing: 0.1em;
+
+}
+
 //layout
 
 @mixin logo-layout{
@@ -117,4 +161,31 @@ $mixin
   -o-filter: brightness(0.6);
   -ms-filter: brightness(0.6);
   filter: brightness(0.6);
+}
+
+@mixin img-blight-light{
+  -webkit-filter: brightness(1);
+  -moz-filter: brightness(1);
+  -o-filter: brightness(1);
+  -ms-filter: brightness(1);
+  filter: brightness(1);
+}
+
+
+//border
+@mixin bottom-line {
+  display: inline-block;
+  border-bottom: 5px #1d1d1d solid;
+}
+
+
+
+@mixin border-box-2 {
+  border-style: solid;
+  border-width: 2px;
+}
+
+@mixin border-box-4 {
+  border-style: solid;
+  border-width: 4px;
 }

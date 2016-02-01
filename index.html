@@ -26,11 +26,15 @@
   <link href="css/reset.css" rel="stylesheet">
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="slider/slider.css">
+
 </head>
 
 <body class="body-wrap">
 
-  <header class="header-content">
+  <header class="header-content" id="head-nav">
     <div class="header-logo logo-fab">
       <a href="https://mtrl.net/shibuya/" class="js-pagelink"><img src="https://mtrl.net/shibuya/wp-content/themes/mtrl/assets/images/common/rogo_fabmtrl_white.svg" alt="FabCafe MTRL"></a>
     </div>
@@ -47,7 +51,7 @@
       <div class="navbar-collapse collapse">
         <ul class="header-nav-ul nav navbar-nav navbar-right">
           <li class="header-nav-li">
-            <a href="https://mtrl.net/materials/" class="nav__listItemTarget u-enBold js-pagelink">MATERIALS</a>
+            <a href="materials.html" class="nav__listItemTarget u-enBold js-pagelink">MATERIALS</a>
           </li>
           <li class="header-nav-li">
             <a href="https://mtrl.net/blog/" class="nav__listItemTarget u-enBold js-pagelink">BLOG</a>
@@ -75,15 +79,18 @@
 
       <div class="main-content-bk"></div>
       <section class="main-visual clearfix">
-        <p>PROJECT SPACE FOR MATERIAL HACKERS</p>
+        <p class="main-subtitle">PROJECT SPACE
+          <br> FOR MATERIAL HACKERS</p>
         <h1 class="main-title">FabCafe MTRL</h1>
-        <p>2015年12月10日（木）プレオープン</p>
+        <p class="main-preopen">2015年12月10日（木）プレオープン</p>
 
         <article class="main-visisual-detail">
-          <p>OPEN HOURS（1月中）</p>
-          <p>月〜金11:00 – 18:00</p>
-          <P>土日祝休</P>
-          <P>渋谷から徒歩10分　MAP</P>
+          <div class="right">
+            <p>OPEN HOURS（1月中）</p>
+            <p>月〜金11:00 – 18:00</p>
+            <P>土日祝休</P>
+            <P>渋谷から徒歩10分　MAP</P>
+          </div>
         </article>
       </section>
     </section>
@@ -93,7 +100,7 @@
 
     <section class="info clearfix">
       <div class="container">
-        <h1 class="sec-title info-title">FabCafe × Material & Hacks</h1>
+        <h1 class="sec-title info-title">FabCafe × Material &amp; Hacks</h1>
         <p>デジタルファブリケーションを通して新しいものづくりに気軽に取り組めるFabCafe。その2Fが”FabCafe MTRL”になりました。</p>
 
         <p>FabCafe MTRLはMTRL KYOTOと同様、素材(マテリアル)がテーマのコワーキングスペース。先端センサー機器やバイオ技術から 伝統素材までさまざまな「素材」にじっくりと時間をかけて取り組むことができます。
@@ -102,11 +109,20 @@
         <p>「これまでFabCafeに来ていたけどもっとものづくりに本格的に取り組みたい」
           <br> 「プロジェクトで2ヶ月、頻繁に3Dプリンターとレーザーカッターや基盤を使ったプロトタイプづくりをしなければいけない」 FabCafeが大切にしている“オープンなものづくりコミュニティ”はそのままにより深く、本格的なものづくりを行うためのスペー スとして、クリエイターから起業家、そして企業のプロジェクトまでぜひご活用ください。
         </p>
-
-        <figure><img src="images/intro-photo01.jpg" alt="ものづくりの様子" /></figure>
-
-    </div>
-    <!-- /.container -->
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 info-img">
+            <figure><img src="images/intro-photo01.jpg" alt="ものづくりの様子" /></figure>
+          </div>
+          <div class="col-xs-12 col-sm-4 info-img">
+            <figure><img src="images/intro-photo02.jpg" alt="ものづくりの様子" /></figure>
+          </div>
+          <div class="col-xs-12 col-sm-4 info-img">
+            <figure><img src="images/intro-photo03.jpg" alt="ものづくりの様子" /></figure>
+          </div>
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
     </section>
 
 
@@ -114,8 +130,70 @@
     <section class="floor">
       <h1 class="sec-title floor-title">FLOOR / SERVICE</h1>
       <p>場所はFabCafe Tokyoすぐ上の2F。165平米のスペースを用意しています。（約50席）</p>
-      <div class="floor-map">
 
+      <h2 class="floor-map-title">
+						<span class="floor-title1">2</span>
+            <span class="floor-title2">F</span>
+            <span class="floor-title3">FabCafe MTRL</span>
+			</h2>
+
+      <div class="floor-map hidden-xs">
+        <ul class="map-items" id="js-mapTxt" style="height: 40px;">
+
+          <li class="map-item1" id="map01">
+            <dl class="block">
+              <dt class="map-item-title">MATERIAL</dt>
+              <dd class="map-item-txt">全国各地から集めたマテリアルを展示</dd>
+            </dl>
+          </li>
+          <li class="map-item2" id="map02">
+            <dl class="block">
+              <dt class="map-item-title">WORK TABLE</dt>
+              <dd class="map-item-txt">天然木を使った大きな
+                <br class="br">テーブルを使って広々と作業</dd>
+            </dl>
+          </li>
+          <li class="map-item3" id="map03">
+            <dl class="block">
+              <dt class="map-item-title">PROJECT BOX</dt>
+              <dd class="map-item-txt">長期利用に便利な多機能ボックス</dd>
+            </dl>
+          </li>
+          <li class="map-item4" id="map04">
+            <dl class="block">
+              <dt class="map-item-title">SOFA AREA</dt>
+              <dd class="map-item-txt">打ち合わせや作業合間に使えるリラックスゾーン</dd>
+            </dl>
+          </li>
+          <li class="map-item5" id="map05">
+            <dl class="block">
+              <dt class="map-item-title">SOUND SYSTEM</dt>
+              <dd class="map-item-txt">超ハイレゾスピーカーシステム”Awaken”で飛騨山中を超体験</dd>
+            </dl>
+          </li>
+          <li class="map-item6" id="map06">
+            <dl class="block">
+              <dt class="map-item-title">EVENT / PROJECT SPACE</dt>
+              <dd class="map-item-txt">数多くのクリエイティブなイベントが頻繁に開催</dd>
+            </dl>
+          </li>
+          <li class="map-item7" id="map07">
+            <dl class="block">
+              <dt class="map-item-title">PRESENTATION BOARD</dt>
+              <dd class="map-item-txt">80インチの大型ディスプレイを使ったプレゼンが可能</dd>
+            </dl>
+          </li>
+          <li class="map-item8" id="map08">
+            <dl class="block">
+              <dt class="map-item-title">GARAGE</dt>
+              <dd class="map-item-txt">木材加工など音が大きな作業に
+                <br class="br">使えるワークスペース</dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+      <div class="visible-xs">
+        <figure><img src="images/floor-img-sp.png" alt="cafeのフロアマップ"　class="img-responsive" /></figure>
       </div>
       <!-- /.foor-map -->
     </section>
@@ -125,217 +203,408 @@
 
     <section class="plan">
       <div class="container">
-      <h1 class="sec-title plan-title">Plan & Price</h1>
-      <div class="col-xs-12 col-sm-6 plen-drop">
-        <img src="images/plan-photo01.jpg" class="img-responsive" alt="">
+        <h1 class="sec-title plan-title1">Plan &amp; Price</h1>
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1 plen-drop">
+            <div class="plan-content plan1">
+              <figure>
+                <img src="images/plan-photo01.jpg" class="img-responsive" alt="作業している様子">
+              </figure>
+              <h3 class="plan-item-title">Drop-In</h3>
+              <p>半日単位で集中的に利用したいときに。
+                <br>
+                <em class="plan-point-txt">（2016年1月中はスペース利用無料！）</em></p>
+              <dl class="plan-item-detail">
+                <dt class="plan-item1">~4H / ¥1,300</dt>
+                <dd class="plan-item2">Cafe 40%OFF/Fab 20％OFF</dd>
+              </dl>
+              <dl class="plan-item-detail">
+                <dt class="plan-item1">4H~1Day / ¥2,200</dt>
+                <dd class="plan-item2">Cafe 40%OFF/Fab 20％OFF</dd>
+              </dl>
+            </div>
+            <!-- /.plan-content -->
+          </div>
+          <!-- plan-drop -->
+
+          <div class="col-xs-10 col-xs-offset-1 col-sm-5 plen-month">
+            <div class="plan-content plan2">
+              <figure>
+                <img src="images/plan-photo02.jpg" class="img-responsive" alt="機械が動いている様子">
+              </figure>
+              <h3 class="plan-item-title">Monthly</h3>
+              <p>中長期のプロジェクトスペースとしても
+                <br> ご利用いただけます。
+              </p>
+              <dl class="plan-item-detail">
+                <dt class="plan-item1">2Weeks / ¥15,000</dt>
+                <dd class="plan-item2">Cafe 40%OFF/Fab 20％OFF</dd>
+              </dl>
+              <dl class="plan-item-detail">
+                <dt class="plan-item1">Monthly / ¥20,000</dt>
+                <dd class="plan-item2">Cafe 40%OFF/Fab 20％OFF</dd>
+              </dl>
+            </div>
+            <!-- /.plan-content -->
+          </div>
+          <!-- plan-mouth -->
+        </div>
+        <!-- row -->
+        <div class="use">
+          <div class="box clearfix">
+            <h2 class="plan-title2">How to Use <span class="title-sm-bold">ご利用方法</span></h2>
+          </div>
+          <p>FabCafeにお越しいただき「FabCafe MTRL(ファブカフェ マテリアル)を使いたい」とお伝えください。</p>
+
+          <div class="pre-ticket">
+            <p class="txt">FabCafe　MTRLプレオープン記念
+              <br> MTRLメンバー登録限定で
+              <p><em class="point"> <span class="txt-big">2016</span>年<span class="txt-big">1</span>月中の<span class="txt-big">ご利用</span>が<span class="txt-big">無料！</span></em></p>
+            </p>
+          </div>
+        </div>
+        <!-- use -->
+
+        <div class="equipment">
+          <div class="box clearfix">
+            <h2 class="plan-title2">Equipment <span class="title-sm-bold">基本設備</span></h2>
+          </div>
+          <ul class="equipment-items clearfix">
+            <li class="item">
+              <figure class="item-img">
+                <img src="images/wifi.svg" alt="wifi有り" class="wifi">
+              </figure>
+              <figcaption>Wifi</figcaption>
+            </li>
+            <li class="item">
+              <figure class="item-img">
+                <img src="images/power_supply.svg" alt="電源有り" class="power">
+              </figure>
+              <figcaption>電源</figcaption>
+            </li>
+            <li class="item">
+              <figure class="item-img"><img src="images/tool.svg" alt="工具有り" class="tool"></figure>
+              <figcaption>工具</figcaption>
+            </li>
+            <li class="item">
+              <figure class="item-img"><img src="images/material.svg" alt="フリーマテリアル" class="material"></figure>
+              <figcaption>FREE&nbsp;MATERIAL</figcaption>
+            </li>
+            <li class="item">
+              <figure class="item-img"><img src="images/display.svg" alt="80インチディスプレイモニター有り" class="display"></figure>
+              <figcaption>80インチモニター</figcaption>
+            </li>
+          </ul>
+        </div>
+        <!-- equipment -->
       </div>
-      <!-- plan-drop -->
-
-      <div class="col-xs-12 col-sm-6 plen-month">
-        <img src="images/plan-photo02.jpg" class="img-responsive" alt="">
-      </div>
-      <!-- plan-mouth -->
-
-      <h2>How to Useご利用方法</h2>
-      <p>FabCafeにお越しいただき「FabCafe MTRL(ファブカフェ マテリアル)を使いたい」とお伝えください。</p>
-
-      <div class="pre-ticket">
-        <p>FabCafe　MTRLプレオープン記念
-          <br> MTRLメンバー登録限定で
-          <br> 2016年1月中のご利用が無料！
-        </p>
-      </div>
-
-      <h2>Equipment基本設備</h2>
-      <ul>
-        <li>
-          <figure>
-            <img src="images/wifi.svg" alt="wifi有り">
-          </figure>
-          <figcaption>
-            Wifi
-          </figcaption>
-        </li>
-        <li>
-          <figure>
-            <img src="images/power_supply.svg" alt="電源有り">
-          </figure>
-          <figcaption>電源</figcaption>
-        </li>
-        <li>
-          <figure><img src="images/tool.svg" alt="工具有り"></figure>
-          <figcaption>工具</figcaption>
-        </li>
-        <li>
-          <figure><img src="images/material.svg" alt="フリーマテリアル"></figure>
-          <figcaption>FREE&nbsp;MATERIAL</figcaption>
-        </li>
-        <li>
-          <figure><img src="images/display.svg" alt="80インチディスプレイモニター有り"></figure>
-          <figcaption>80インチモニター</figcaption>
-        </li>
-      </ul>
-    </div>
-    <!-- /.container -->
+      <!-- /.container -->
     </section>
     <!-- plan -->
 
 
+    <section class="experience">
+      <h1 class="sec-title experience-title"> MATERIALS FOR HACK</h1>
+      <p>伝統的な素材からテクノロジーの粋を尽くした電子部品まで。
+        <br> クリエイティブワークのインスピレーションとなるさまざまな"素材"とツールをご体験ください。
+      </p>
+      <div class="container" id="slider-box">
 
+        <div class="flickSlider">
 
-    <!-- <section class="experience">
-    <h1> MATERIALS FOR HACK</h1>
-    <p>伝統的な素材からテクノロジーの粋を尽くした電子部品まで。<br>
-      クリエイティブワークのインスピレーションとなるさまざまな"素材"とツールをご体験ください。</p>
-  </section> -->
+          <div class="flickView">
+            <ul>
+              <li class="view-box">
+                <a href="#1"><img src="images/nano.jpg" alt=""></a>
+                <div class="view-txt">
+                  <dl>
+                    <dt>
+                放射線線量計測器
+                <h2>bGeigie Nano</h2>
+              </dt>
+                    <dd>bGeigie Nano は SAFECAST が独自に開発、デザインした組み立て型放射線計測器。</dd>
+                  </dl>
+                  <a class="button2 view-btn" href="#">詳しく見る</a>
+                  <!-- view-btn -->
+                </div>
+                <!-- /.view-txt -->
+              </li>
+              <li class="view-box">
+                <a href="#2"><img src="images/omron.jpg" alt=""></a>
+                <div class="view-txt">
+                  <dl>
+                    <dt>
+                  人理解センサー
+                  <h2>Human Vision Components</h2>
+                </dt>
+                    <dd>HVC-Cは顔検出、人体検出、齢推定、性別推定、顔認証、ペット検出などの11種類の画像センシング機能を持つカメラ付きセンサーデバイス。</dd>
+                  </dl>
+                  <a class="button2 view-btn" href="#">詳しく見る</a>
+                  <!-- view-btn -->
+                </div>
+                <!-- /.view-txt -->
+              </li>
+              <li class="view-box">
+                <a href="#3"><img src="images/sonymesh.jpg" alt=""></a>
+                <div class="view-txt">
+                  <dl>
+                    <dt>
+                  MESH™ – スマートブロック
+                  <h2>MESH™ - Smart block</h2>
+                </dt>
+                    <dd>簡単にインタラクティブな 仕掛けを作れるブロック。</dd>
+                  </dl>
+                  <a class="button2 view-btn" href="#">詳しく見る</a>
+                  <!-- view-btn -->
+                </div>
+                <!-- /.view-txt -->
+              </li>
+              <li class="view-box">
+                <a href="#4"><img src="images/nishijin.jpg" alt=""></a>
+                <div class="view-txt">
+                  <dl>
+                    <dt>
+                  西陣織
+                  <h2>Nishijin Ori</h2>
+                </dt>
+                    <dd>日本の紋織技術をリードする、京都西陣産の最高級絹織物。</dd>
+                  </dl>
+                  <a class="button2 view-btn" href="#">詳しく見る</a>
+                  <!-- view-btn -->
+                </div>
+                <!-- /.view-txt -->
+              </li>
+              <li class="view-box">
+                <a href="#5"><img src="images/washi.jpg" alt=""></a>
+                <div class="view-txt">
+                  <dl>
+                    <dt>
+                  山中和紙
+                  <h2>bGeigie Nano</h2>
+                </dt>
+                    <dd>bGeigie Nano は SAFECAST が独自に開発、デザインした組み立て型放射線計測器。</dd>
+                  </dl>
+                  <a class="button2 view-btn" href="#">詳しく見る</a>
+                  <!-- view-btn -->
+                </div>
+                <!-- /.view-txt -->
+              </li>
+              <li class="view-box">
+                <a href="#6"><img src="images/tango.jpg" alt=""></a>
+                <div class="view-txt">
+                  <dl>
+                    <dt>
+                  丹後ちりめん
+                  <h2>Tango Silk Crepe</h2>
+                </dt>
+                    <dd>"海の京都"の歴史と風土が育んだ優美で機能的な織物</dd>
+                  </dl>
+                  <a class="button2 view-btn" href="#">詳しく見る</a>
+                  <!-- view-btn -->
+                </div>
+                <!-- /.view-txt -->
+              </li>
+            </ul>
+          </div>
+          <!--/.flickView-->
+
+          <div class="flickThumb">
+            <ul>
+              <li><img src="images/materials-1.jpg" alt=""></li>
+              <li><img src="images/materials-2.jpg" alt=""></li>
+              <li><img src="images/materials-3.jpg" alt=""></li>
+              <li><img src="images/materials-4.jpg" alt=""></li>
+              <li><img src="images/materials-5.jpg" alt=""></li>
+              <li><img src="images/materials-6.jpg" alt=""></li>
+            </ul>
+          </div>
+          <!--/.flickThumb-->
+
+        </div>
+        <!--/.flickSlider-->
+
+      </div>
+      <!--/#container-->
+      <a class="button material-btn" href="#">+ すべてのマテリアル</a>
+    </section>
+    <!-- experience -->
 
 
 
     <section class="blog">
       <div class="container">
-      <h1 class="sec-title blog-title">BLOG</h1>
-
-      <article class="blog-content row">
-        <div class="col-xs-12 col-sm-6">
-          <figure><img src="images/DSC_5057-770x481.jpg" alt="" /></figure>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-          <ul class="blog-info">
-            <li>INFORMATION</li>
-            <li>
-              <time datetime="2016-01-06"></time>
-            </li>
-          </ul>
-          <div class="blog-title-box">
-            <h3 class="blog-title">
+        <h1 class="sec-title blog-title">BLOG</h1>
+        <article class="blog-content row">
+          <div class="col-xs-12 col-sm-6 blog-images">
+            <figure><img src="images/DSC_5057-770x481.jpg" alt="" /></figure>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="blog-info-box">
+              <div class="blog-info">INFORMATION</div>
+            </div>
+            <div class="blog-title-box">
+              <h3 class="blog-content-title">
   						先端センサー機器やバイオ技術、伝統素材を体験できるクリエイティブスペース「FabCafe MTRL」がプレオープン中。
             </h3>
-            <p>FabCafe MTRL&nbsp;(ファブカフェ マテリアル)は2015年12月10日（木）よりプレオープンしたクリエイティブスペース。先端センサー機器やバイオ技術から伝統素材までさまざまな「素材」にじっくりと時間</p>
+              <p class="txt">FabCafe MTRL&nbsp;(ファブカフェ マテリアル)は2015年12月10日（木）よりプレオープンしたクリエイティブスペース。先端センサー機器やバイオ技術から伝統素材までさまざまな「素材」にじっくりと時間</p>
+            </div>
           </div>
-        </div>
-      </article>
-      <!-- /.blog-content -->
+        </article>
+        <!-- /.blog-content -->
 
-      <article class="blog-content row">
-        <div class="col-xs-12 col-sm-6">
-          <figure><img src="images/sonymesh.jpg" alt="" /></figure>
-        </div>
-        <div class="col-xs-12 col-sm-6">
-          <ul class="blog-info">
-            <li>INFORMATION</li>
-            <li>
-              <time datetime="2016-01-09"></time>
-            </li>
-          </ul>
-          <div class="blog-title-box">
-            <h3 class="blog-title">
+        <article class="blog-content row">
+          <div class="col-xs-12 col-sm-6">
+            <div class="blog-info">
+              <div class="blog-info-box">INFORMATION</div>
+            </div>
+            <div class="blog-title-box">
+              <h3 class="blog-content-title">
               SONY MESH Touch&amp;Try in FabCafe MTRL
             </h3>
-            <p>
-              先端センサー機器やバイオ技術から伝統素材までさまざまな「素材」にじっくりと時間をかけて取り組むことができるクリエイティブスペースFabCafeMTRLには、マテリアルとしてそSONYの電子タグ「MESH」が
-            </p>
+              <p class="txt">
+                先端センサー機器やバイオ技術から伝統素材までさまざまな「素材」にじっくりと時間をかけて取り組むことができるクリエイティブスペースFabCafeMTRLには、マテリアルとしてそSONYの電子タグ「MESH」が
+              </p>
+            </div>
           </div>
-        </div>
-      </article>
-      <!-- /.blog-content -->
-      <div class="blog-btn">
-        <a href="#"><span>すべてのブログ</span></a>
+          <div class="col-xs-12 col-sm-6 blog-images">
+            <figure><img src="images/sonymesh.jpg" alt="設備品の写真" /></figure>
+          </div>
+        </article>
+        <!-- /.blog-content -->
+        <a class="button blog-btn" href="#">＋&nbsp;すべてのブログ</a>
+        <!-- blog-btn -->
       </div>
-      <!-- blog-btn -->
-    </div>
-    <!-- /.container -->
+      <!-- /.container -->
     </section>
     <!-- blog -->
 
 
 
-
     <section class="entry">
-      <div class="container">
-      <ul>
-        <li>
-          <a href="https://mtrl.net/shibuya/" class="js-pagelink">
-            <img src="https://mtrl.net/shibuya/wp-content/themes/mtrl/assets/images/common/rogo_fabmtrl.svg" alt="" />
-          </a>
-        </li>
-        <li>
-          <dl class="">
-            <dt class="title"><span class="u-enBold">OPEN HOURS</span><span class="jp">（1月中）</span></dt>
-            <dd class="txt">
-              <span class="block"><span class="u-enBold">11:00-18:00</span><span class="jp">(土日祝休)</span></span>
-            </dd>
-          </dl>
-        </li>
-        <li>
-          <dl class="">
-            <dt class="title">TEL</dt>
-            <dd class="txt">
-              <a href="tel:0354595123" class="">03-5459-5123</a>
-            </dd>
-          </dl>
-        </li>
-      </ul>
-
-      <h1 class="sec-title entry-title">MTRLメンバーシップに登録する</h1>
-
-      <p>メールアドレスやソーシャルアカウントで手軽に登録できます（無料）</p>
-
-      <ul>
-        <li>NEWS LETTER</li>
-        <li>EVENT ATTEND</li>
-        <li>SERVICE</li>
-      </ul>
-
-      <div class="entry-btn">
-        <a href="#"><span class="txt">MTRL メンバーとは？ / メンバー登録（無料）</span></a>
+      <div class="shopinfo">
+        <div class="container">
+          <ul class="clearfix shopinfo-content">
+            <li class="visible-xs entry-logo-sp">
+              <a href="https://mtrl.net/shibuya/" class="js-pagelink">
+                <img src="https://mtrl.net/shibuya/wp-content/themes/mtrl/assets/images/common/rogo_fabmtrl_white.svg" alt="FabCafe MARL" />
+              </a>
+            </li>
+            <li class="hidden-xs entry-logo">
+              <a href="https://mtrl.net/shibuya/" class="js-pagelink">
+                <img src="https://mtrl.net/shibuya/wp-content/themes/mtrl/assets/images/common/rogo_fabmtrl.svg" alt="FabCafe MARL" />
+              </a>
+            </li>
+            <li>
+              <dl class="entry-open-hours">
+                <dt class="title"><span class="en-bold">OPEN HOURS</span><span class="">（1月中）</span></dt>
+                <dd class="txt">
+                  <span class="en-bold">11:00-18:00</span><span class="">(土日祝休)</span>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl class="entry-tel">
+                <dt class="title"><span class="en-bold">TEL</span></dt>
+                <dd class="txt">
+                  <a href="tel:0354595123" class="en-bold">03-5459-5123</a>
+                </dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+        <!-- /.container -->
       </div>
-    </div>
-    <!-- /.container -->
+      <!-- /.shopinfo -->
+
+      <div class="entry-detail">
+        <div class="container">
+          <h1 class="sec-title entry-title">MTRLメンバーシップに登録する</h1>
+
+          <p>メールアドレスやソーシャルアカウントで手軽に登録できます（無料）</p>
+
+          <ul class="clearfix entry-detail-content">
+            <li>
+              <a href="#">
+                <i class="material-icons">email</i>
+                <span class="txt">NEWS LETTER</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="material-icons">record_voice_over</i>
+                <span class="txt">EVENT ATTEND</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="material-icons">build</i>
+                <span class="txt">SERVICE</span>
+              </a>
+            </li>
+          </ul>
+          <a class="button entry-btn" href="#">MTRL メンバーとは？ / メンバー登録（無料）</a>
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /.entry-detail -->
     </section>
     <!-- entry -->
-
-
-
 
   </main>
   <!-- .main-content -->
 
-  <footer>
+  <footer class="footer-content">
+    <div class="container clearfix footer-link">
+      <div class="footer-Fb">
+        <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/fabcafemtrl" data-width="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false" fb-xfbml-state="rendered"
+        fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=742133919249398&amp;container_width=375&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Ffabcafemtrl&amp;locale=ja_JP&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=false&amp;width=500"><span style="vertical-align: bottom; width: 375px; height: 214px;">
+      <iframe name="f3668ed17c" width="500px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:page Facebook Social Plugin" src="https://www.facebook.com/v2.4/plugins/page.php?adapt_container_width=true&amp;app_id=742133919249398&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df3c2d1e278%26domain%3Dmtrl.net%26origin%3Dhttps%253A%252F%252Fmtrl.net%252Ff1d6f3b63%26relation%3Dparent.parent&amp;container_width=375&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Ffabcafemtrl&amp;locale=ja_JP&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=false&amp;width=500" style="border: none; visibility: visible; width: 375px; height: 214px;" class=""></iframe></span></div>
+      </div>
 
-    <div class="f__btmLinksFb">
-      <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/fabcafemtrl" data-width="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false" fb-xfbml-state="rendered"
-      fb-iframe-plugin-query="adapt_container_width=true&amp;app_id=742133919249398&amp;container_width=375&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Ffabcafemtrl&amp;locale=ja_JP&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=false&amp;width=500"><span style="vertical-align: bottom; width: 375px; height: 214px;"><iframe name="f3668ed17c" width="500px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:page Facebook Social Plugin" src="https://www.facebook.com/v2.4/plugins/page.php?adapt_container_width=true&amp;app_id=742133919249398&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df3c2d1e278%26domain%3Dmtrl.net%26origin%3Dhttps%253A%252F%252Fmtrl.net%252Ff1d6f3b63%26relation%3Dparent.parent&amp;container_width=375&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Ffabcafemtrl&amp;locale=ja_JP&amp;sdk=joey&amp;show_facepile=true&amp;show_posts=false&amp;small_header=false&amp;width=500" style="border: none; visibility: visible; width: 375px; height: 214px;" class=""></iframe></span></div>
+      <div class="sns_link">
+        <h3>SOCIAL MEDIA</h3>
+        <a href="https://www.facebook.com/fabcafemtrl/" class="f__btmLinksSocialListItemTarget f__btmLinksSocialListItemTarget--fb c-target" target="_blank">
+          <span class="icon"><i class="fa fa-facebook"></i></span>
+          <span class="txt">FACEBOOK</span>
+        </a>
+      </div>
+      <!-- sns_link -->
+
+      <div class="mtrt_kyoto">
+        <a href="https://mtrl.net/kyoto/" class="f__btmLinksMtrl c-target" target="_blank">
+          <div class="logo"><img src="https://mtrl.net/shibuya/wp-content/themes/mtrl/assets/images/common/rogo.svg" alt="" data-pin-nopin="true"></div>
+          <div class="icon footer-arrow">
+            <i class="material-icons">arrow_forward</i>
+          </div>
+        </a>
+      </div>
+      <!-- /.mtrt_kyoto -->
     </div>
+    <!-- container -->
 
-    SOCIAL MEDIA
-    <a href="https://www.facebook.com/fabcafemtrl/" class="f__btmLinksSocialListItemTarget f__btmLinksSocialListItemTarget--fb c-target" target="_blank">
-									<span class="icon"><i class="c-iconfooterFacebook"></i></span>
-									<span class="txt u-enBold">FACEBOOK</span>
-								</a>
-
-    <nav class="footer-nav">
-
-      <div class="f__nav">
-			<div class="c-section u-cf">
-				<nav class="f__navBlock">
-					<ul class="f__navBlockList">
-						<li class="f__navBlockListItem"><a href="https://mtrl.net/faq/" class="u-en c-target js-pagelink">FAQ</a></li>
-						<li class="f__navBlockListItem"><a href="https://mtrl.net/contact/" class="u-en c-target js-pagelink">CONTACT</a></li>
-						<li class="f__navBlockListItem"><a href="https://mtrl.net/company/" class="u-en c-target js-pagelink">COMPANY INFO</a></li>
-						<li class="f__navBlockListItem"><a href="https://mtrl.net/privacy/" class="u-en c-target js-pagelink">PRIVACY POLICY</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-
-
-    </nav>
+    <div class="footer-nav-content">
+      <div class="container">
+        <nav class="footer-nav-detail">
+          <ul class="clearfix">
+            <li class=""><a href="https://mtrl.net/faq/" class="u-en c-target js-pagelink">FAQ</a></li>
+            <li class=""><a href="https://mtrl.net/contact/" class="u-en c-target js-pagelink">CONTACT</a></li>
+            <li class=""><a href="https://mtrl.net/company/" class="u-en c-target js-pagelink">COMPANY INFO</a></li>
+            <li class=""><a href="https://mtrl.net/privacy/" class="u-en c-target js-pagelink">PRIVACY POLICY</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- /.container -->
+    </div>
     <!-- .footer-nav -->
 
-    <div class="f__btmPagetop">
-			<a href="#wrapper" class="js-pagescroll"><img src="https://mtrl.net/shibuya/wp-content/themes/mtrl/assets/images/common/pagetop_sp.png" alt=""></a>
-		</div>
+    <div class="footer-pagetop visible-xs">
+      <a href="#" class="js-pagescroll">
+        <img src="https://mtrl.net/shibuya/wp-content/themes/mtrl/assets/images/common/pagetop_sp.png" alt=""></a>
+    </div>
   </footer>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="slider/jquery.slider.js"></script>
 
   <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
   <script src="https://use.typekit.net/spq7qwq.js"></script>
@@ -346,6 +615,74 @@
       });
     } catch (e) {}
   </script>
+
+  <script>
+    $(window).scroll(function() {
+
+      /*どのくらいスクロールしたら実行するか この例では200以上*/
+      if ($(window).scrollTop() >= 200) {
+
+        /*200以上スクロールした時のアクション*/
+        $(".navbar-default .navbar-nav > li > a").css("color", "#1d1d1d");
+      } else {
+
+        /*200以上スクロールしていない時のアクション*/
+        $(".navbar-default .navbar-nav > li > a").css("color", "#fff")
+      }
+    });
+
+    $(window).scroll(function() {
+
+      /*どのくらいスクロールしたら実行するか この例では200以上*/
+      if ($(window).scrollTop() >= 200) {
+
+        /*200以上スクロールした時のアクション*/
+        $(".header-logo > a > img").attr("src", "https://mtrl.net/shibuya/wp-content/themes/mtrl/assets/images/common/rogo_fabmtrl.svg");
+      } else {
+
+        /*200以上スクロールしていない時のアクション*/
+        $(".header-logo > a > img").attr("src", "https://mtrl.net/shibuya/wp-content/themes/mtrl/assets/images/common/rogo_fabmtrl_white.svg")
+      }
+    });
+
+    $(window).scroll(function() {
+
+      /*どのくらいスクロールしたら実行するか この例では200以上*/
+      if ($(window).scrollTop() >= 200) {
+
+        /*200以上スクロールした時のアクション*/
+        $("#head-nav").css("background-color", "rgba(255,255,255,0.8)"),
+          $("#head-nav").css("padding-top", "0px");
+      } else {
+
+        /*200以上スクロールしていない時のアクション*/
+        $("#head-nav").css("background-color", "transparent"),
+          $("#head-nav").css("padding-top", "20px")
+      }
+    });
+  </script>
+
+  <script>
+  //スムーズスクロール
+  jQuery(function(){
+     // #で始まるアンカーをクリックした場合に処理
+     jQuery('a.js-pagescroll').click(function() {
+  	  // スクロールの速度
+  	  var speed = 1200; // ミリ秒
+  	  // アンカーの値取得
+  	  var href= jQuery(this).attr("href");
+  	  // 移動先を取得
+  	  var target = jQuery(href == "#" || href == "" ? 'html' : href);
+  	  // 移動先を数値で取得
+  	  var position = target.offset().top;
+  	  // スムーススクロール
+  	  jQuery('body,html').animate({scrollTop:position}, speed, 'swing');
+  	  return false;
+     });
+  });
+  </script>
+
+
 
 </body>
 <!-- .all -->

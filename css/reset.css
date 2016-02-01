@@ -27,6 +27,7 @@ time, mark, audio, video {
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
+    list-style-type: none;
 }
 
 html{
@@ -62,6 +63,12 @@ a {
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
+    color: #fff;
+}
+a:hover {
+    color: #fff;
+    -webkit-transition: 0.5s;
+    opacity: 0.7;
 }
 
 /* change colours to suit your needs */
@@ -105,4 +112,17 @@ hr {
 
 input, select {
     vertical-align:middle;
+}
+
+em{
+  font-style: normal;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
 }
